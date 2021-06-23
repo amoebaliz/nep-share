@@ -5,7 +5,7 @@ The following example is for NEP model (as of 6-23-2021) and may not be relevant
 ## Clone MOM6-examples respository
 
 ```rust
-git clone https://github.com/NOAA-GFDL/MOM6-examples.git
+git clone [https://github.com/NOAA-GFDL/MOM6-examples.git](https://github.com/NOAA-GFDL/MOM6-examples.git)
 ```
 
 ## General repository/ compile script compatibility instructions:
