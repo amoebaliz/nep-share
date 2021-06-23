@@ -1,4 +1,7 @@
 # Comprehensive compiling info: [MOM6-examples wiki](https://github.com/NOAA-GFDL/MOM6-examples/wiki/Getting-started#compiling-the-models)
+
+The following example is for NEP model (as of 6-23-2021) and may not be relevant for all computing systems
+
 ## Clone MOM6-examples respository
 
 ```rust
