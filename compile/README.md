@@ -1,4 +1,4 @@
-# For thorough compiling instructions, see [MOM6-examples wiki](https://github.com/NOAA-GFDL/MOM6-examples/wiki/Getting-started#compiling-the-models)
+# Comprehensive compiling info: [MOM6-examples wiki](https://github.com/NOAA-GFDL/MOM6-examples/wiki/Getting-started#compiling-the-models)
 ## Clone MOM6-examples respository
 
 ```rust
