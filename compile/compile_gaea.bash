@@ -1,18 +1,26 @@
 #!/bin/bash
 
+# Gaea compile script for MOM6-examples git version: 
+#       ae27c868471aaa0cc03a06912137637a2570a8d3
 
-# Working compile for MOM6-examples git version: 
+# Instructions:
+# 	git clone https://github.com/NOAA-GFDL/MOM6-examples.git
+# 	cd MOM6-examples
+# 	git reset --hard ae27c868471aaa0cc03a06912137637a2570a8d3
+# 	git submodule update --recursive
+# 	edit MOM6-examples/src/coupler/coupler_main.F90 to permit gregorian calendar
+# 	edit this compile script for specific directories
 
 
-
-MOM6_installdir=/lustre/f2/dev/gfdl/Liz.Drenkard/MOM6-examples
-MOM6_rundir=/lustre/f2/dev/gfdl/Liz.Drenkard/MOM6-examples
+MOM6_installdir=<directory_where_MOM6-examples_repository_lives>/MOM6-examples
+MOM6_rundir=<directory_where_MOM6-examples_repository_lives>/MOM6-examples
 
 FMS_dir=$MOM6_installdir/src/FMS
 
 compile_fms=1
 compile_mom=1
 
+## Modules specific to GFDL gaea - may differ on other systems
 module unload PrgEnv-pathscale
 module unload PrgEnv-pgi
 module unload PrgEnv-intel
@@ -25,7 +33,8 @@ module unload netcdf
 module load cray-netcdf
 module load cray-hdf5
 
-module unload darshan
+module unload darsha
+## END of Gaea modules 
 
 cd $MOM6_rundir
 
