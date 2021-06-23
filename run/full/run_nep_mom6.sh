@@ -38,7 +38,10 @@ if [ $? -eq 0 ]; then
    rm -rf restarts_$y	
    cp -r RESTART restarts_$y
    cp MOM_IC.nc restarts_$y
-   ./relaunch.sh "$((y+1))"
+   # relaunch simulation for the next year if not yeat 2017 (end of SODA reanalysis obcs)
+   if [ $y -lt 2017 ]; then
+      ./relaunch.sh "$((y+1))"
+   fi
 else
    exit 1
 fi
